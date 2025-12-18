@@ -67,3 +67,13 @@ iso:
 		--use-librepo=True \
 		--rootfs xfs \
 		localhost/bootc-workstation:latest
+
+pull_from_github:
+	@echo "Pulling from github..."
+	sudo podman pull ghcr.io/azaurus1/bootc-workstation:latest
+
+dev_from_github:
+	@echo "Pulling from github..."
+	sudo podman pull ghcr.io/azaurus1/bootc-workstation:latest
+	@echo "Starting dev from github"
+	sudo bcvk ephemeral run-ssh ghcr.io/azaurus1/bootc-workstation:latest
