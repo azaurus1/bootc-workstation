@@ -4,7 +4,7 @@ COPY /usr /usr
 
 COPY /etc /etc
 
-COPY growfs/ /
+# COPY growfs/ /
 
 RUN dnf install -y fedora-release-sway && \
     dnf group install -y "swaywm-extended"
