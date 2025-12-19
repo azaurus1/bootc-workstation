@@ -16,6 +16,7 @@ RUN dnf -y install \
     iwlwifi-mvm-firmware \
     NetworkManager-wifi \
     plymouth-plugin-script \
+    zsh \
     && dnf clean all
 
 
