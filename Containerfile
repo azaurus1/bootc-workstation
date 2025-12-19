@@ -40,7 +40,7 @@ kargs = ["splash quiet"]
 match-architectures = ["x86_64"]
 EOF
 
-RUN hostnamectl set-hostname vela
+RUN echo "vela" > /etc/hostname
 
 # RUN systemctl enable seatd.service \
 #     && systemctl enable greetd.service
