@@ -18,7 +18,9 @@ RUN dnf -y install \
     plymouth-plugin-script \
     zsh \
     'dnf5-command(copr)' \
-    git \
+    golang \
+    rust \
+    cargo \
     && dnf clean all
 
 RUN dnf copr enable scottames/ghostty -y
