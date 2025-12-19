@@ -21,6 +21,8 @@ RUN dnf -y install \
     golang \
     rust \
     cargo \
+    flameshot \
+    dejavu-sans-fonts \
     && dnf clean all
 
 RUN dnf copr enable scottames/ghostty -y
@@ -40,7 +42,6 @@ kargs = ["splash quiet"]
 match-architectures = ["x86_64"]
 EOF
 
-RUN echo "vela" > /etc/hostname
 
 # RUN systemctl enable seatd.service \
 #     && systemctl enable greetd.service
