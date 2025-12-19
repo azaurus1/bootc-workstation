@@ -17,9 +17,12 @@ RUN dnf -y install \
     NetworkManager-wifi \
     plymouth-plugin-script \
     zsh \
+    'dnf5-command(copr)' \
+    git \
     && dnf clean all
 
-
+RUN dnf copr enable scottames/ghostty -y
+RUN dnf install ghostty -y
 
 RUN ln -s /tmp /var/tmp
 RUN cat <<EOF >> /usr/lib/dracut/dracut.conf.d/plymouth.conf
