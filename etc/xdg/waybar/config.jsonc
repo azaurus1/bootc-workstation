@@ -44,19 +44,19 @@
             "critical": 10
         },
         "format-icons": {
-            "default": "󱊣",
-            "discharging-full": "󱊣",
-            "discharging-great": "󱊣",
-            "discharging-good": "󱊢",
-            "discharging-well": "󱊡",
-            "discharging-warning": "󱊡",
-            "discharging-critical": "󰂃",
-            "charging-full": "󱊦 ",
-            "charging-great": "󱊦 ",
-            "charging-good": "󱊥 ",
-            "charging-well": "󱊤 ",
-            "charging-warning": "󱊤 ",
-            "charging-critical": "󰢟 "
+            "default": "",
+            "discharging-full": "",
+            "discharging-great": "",
+            "discharging-good": "",
+            "discharging-well": "",
+            "discharging-warning": "",
+            "discharging-critical": "",
+            "charging-full": " ",
+            "charging-great": " ",
+            "charging-good": " ",
+            "charging-well": " ",
+            "charging-warning": " ",
+            "charging-critical": " "
         },
         "events": {
             "on-discharging-warning": "notify-send -u normal 'Low Battery'",
@@ -149,19 +149,19 @@
     },
     "custom/reboot": {
         "format": "{icon} ",
-        "format-icons": [""],
+        "format-icons": [""],
         "on-click": "reboot",
         "tooltip-format": "Reboot"
     },
     "custom/lock": {
         "format": "{icon} ",
         "format-icons": [""],
-        "on-click": "hyprctl dispatch exit",
+        "on-click": "swaylock",
         "tooltip-format": "Logout"
     },
     "custom/sleep": {
         "format": "{icon} ",
-        "format-icons": [""],
+        "format-icons": [""],
         "on-click": "zzz",
         "tooltip-format": "Sleep"
     },
