@@ -23,6 +23,9 @@ RUN dnf -y install \
     cargo \
     flameshot \
     dejavu-sans-fonts \
+    google-noto-sans-mono-fonts \
+    fontawesome-fonts \
+    google-noto-emoji-color-fonts \
     && dnf clean all
 
 RUN dnf copr enable scottames/ghostty -y
