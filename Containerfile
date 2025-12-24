@@ -6,6 +6,17 @@ COPY /etc /etc
 
 # COPY growfs/ /
 
+RUN tee -a /etc/yum.repos.d/vscodium.repo << 'EOF'
+[gitlab.com_paulcarroty_vscodium_repo]
+name=gitlab.com_paulcarroty_vscodium_repo
+baseurl=https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/rpms/
+enabled=1
+gpgcheck=1
+repo_gpgcheck=1
+gpgkey=https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg
+metadata_expire=1h
+EOF
+
 RUN dnf install -y fedora-release-sway && \
     dnf group install -y "swaywm-extended"
 
@@ -27,10 +38,13 @@ RUN dnf -y install \
     google-noto-sans-mono-fonts \
     fontawesome-fonts \
     google-noto-emoji-color-fonts \
+    codium \
     && dnf clean all
 
 RUN dnf copr enable scottames/ghostty -y
 RUN dnf install ghostty -y
+
+
 
 RUN ln -s /tmp /var/tmp
 RUN cat <<EOF >> /usr/lib/dracut/dracut.conf.d/plymouth.conf
