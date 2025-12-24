@@ -33,6 +33,7 @@ RUN dnf -y install \
     rust \
     cargo \
     rustup \
+    rust-src \
     flameshot \
     dejavu-sans-fonts \
     google-noto-sans-mono-fonts \
