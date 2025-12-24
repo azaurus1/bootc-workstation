@@ -21,6 +21,7 @@ RUN dnf -y install \
     golang \
     rust \
     cargo \
+    rustup \
     flameshot \
     dejavu-sans-fonts \
     google-noto-sans-mono-fonts \
