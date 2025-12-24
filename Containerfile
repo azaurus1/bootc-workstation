@@ -6,7 +6,7 @@ COPY /etc /etc
 
 # COPY growfs/ /
 
-RUN tee -a /etc/yum.repos.d/vscodium.repo << 'EOF'
+RUN tee /etc/yum.repos.d/vscodium.repo > /dev/null <<'EOF'
 [gitlab.com_paulcarroty_vscodium_repo]
 name=gitlab.com_paulcarroty_vscodium_repo
 baseurl=https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/rpms/
