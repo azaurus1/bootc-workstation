@@ -54,7 +54,8 @@ RUN dnf install -y \
     python3-tkinter \
     python3-devel \
     SDL2-devel \
-    cmake
+    cmake \
+    gcc-c++
 
 RUN ln -s /tmp /var/tmp
 RUN cat <<EOF >> /usr/lib/dracut/dracut.conf.d/plymouth.conf
