@@ -46,10 +46,11 @@ RUN dnf copr enable scottames/ghostty -y
 RUN dnf install ghostty -y
 
 # Zephyr
-RUN dnf group install -y "Development Tools" "C Development Tools and Libraries"
+RUN dnf group install -y "Development Tools" \
+    "C Development Tools and Libraries"
 RUN dnf install -y \
     cmake \
-    ninja-build \ 
+    ninja-build \
     gperf \
     dfu-util \
     dtc \
