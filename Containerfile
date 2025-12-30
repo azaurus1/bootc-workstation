@@ -58,7 +58,8 @@ RUN dnf install -y \
     gcc-c++ \
     libusb1-devel \
     pkg-config \
-    systemd-devel
+    systemd-devel \
+    gcc
 
 RUN ln -s /tmp /var/tmp
 RUN cat <<EOF >> /usr/lib/dracut/dracut.conf.d/plymouth.conf
