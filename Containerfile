@@ -45,25 +45,6 @@ RUN dnf -y install \
 RUN dnf copr enable scottames/ghostty -y
 RUN dnf install ghostty -y
 
-# Zephyr
-RUN dnf group install -y "Development Tools" \
-    "C Development Tools and Libraries"
-RUN dnf install -y \
-    cmake \
-    ninja-build \
-    gperf \
-    dfu-util \
-    dtc \
-    wget \
-    which \
-    python3-pip \
-    python3-tkinter \
-    xz \
-    file \
-    python3-devel \
-    SDL2-devel
-
-
 RUN ln -s /tmp /var/tmp
 RUN cat <<EOF >> /usr/lib/dracut/dracut.conf.d/plymouth.conf
 add_dracutmodules+=" plymouth "
