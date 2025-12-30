@@ -62,6 +62,8 @@ RUN dnf install -y \
     gcc \
     ninja-build
 
+RUN usermod -aG dialout liam
+
 RUN ln -s /tmp /var/tmp
 RUN cat <<EOF >> /usr/lib/dracut/dracut.conf.d/plymouth.conf
 add_dracutmodules+=" plymouth "
