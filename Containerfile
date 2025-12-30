@@ -53,7 +53,8 @@ RUN dnf install -y \
     python3-pip \
     python3-tkinter \
     python3-devel \
-    SDL2-devel 
+    SDL2-devel \
+    cmake
 
 RUN ln -s /tmp /var/tmp
 RUN cat <<EOF >> /usr/lib/dracut/dracut.conf.d/plymouth.conf
