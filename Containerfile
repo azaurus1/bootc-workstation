@@ -55,7 +55,9 @@ RUN dnf install -y \
     python3-devel \
     SDL2-devel \
     cmake \
-    gcc-c++
+    gcc-c++ \
+    libusb1-devel \
+    pkg-config
 
 RUN ln -s /tmp /var/tmp
 RUN cat <<EOF >> /usr/lib/dracut/dracut.conf.d/plymouth.conf
