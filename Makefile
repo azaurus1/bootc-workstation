@@ -60,12 +60,14 @@ iso:
 		--pull=never \
 		--security-opt label=type:unconfined_t \
 		-v ./output:/output \
-		-v ./config.toml:/config.toml:ro \
+		-v ./iso.toml:/config.toml:ro \
 		-v /var/lib/containers/storage:/var/lib/containers/storage \
 		quay.io/centos-bootc/bootc-image-builder:latest \
+		build \
+		--rootfs ext4 \
 		--type iso \
+		--target-arch amd64 \
 		--use-librepo=True \
-		--rootfs xfs \
 		localhost/bootc-workstation:latest
 
 pull_from_github:
