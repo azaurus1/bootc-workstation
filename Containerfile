@@ -1,4 +1,4 @@
-FROM quay.io/fedora/fedora-bootc:43
+FROM ghcr.io/azaurus1/keel:latest
 
 COPY /usr /usr
 
@@ -76,6 +76,8 @@ RUN cat <<EOF >> /usr/lib/bootc/kargs.d/plymouth.toml
 kargs = ["splash quiet"]
 match-architectures = ["x86_64"]
 EOF
+
+RUN systemctl set-default graphical.target
 
 
 # RUN systemctl enable seatd.service \
